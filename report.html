@@ -12061,9 +12061,9 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> The first customer purchases the largest amount of milk, groceries, delicatessen, detergents and paper products of the three samples. This could represent a cafe, coffee chain, juice bar or smoothie establishment, all of which can consume a high volume of milk products in the regular business operations. They also generally offer small bites, sandwiches and finger foods, accounting for the large volume of Deli and Grocery products purchased. Finally, coffee machines, juicers and blenders all require constant cleaning to maintain the standard of cleanliness requires for food production, accounting for the greatest amount of Detergents and Paper products.</p>
-<p>The second customer purchased the greatest amount of Fresh and Frozen products. The could be a restaurant which uses a lot of fresh produce and frozen meat products. It also purchased the least amount of Milk, Grocery, Detergents and Paper products, items that are used in smaller quantities at upscale restaurants.</p>
-<p>The third customer in the sample purchased the smallest quantity of Fresh, Frozen and Deli products, well below the mean of the full dataset. This could represent a small retailer such as a convenience store, with perhaps an attached cafe, whose offerings are generally of small variety and catering to "quick stops". If, however it is an outlier, it could fall into the same category as the second customer, that is, a small restaurant.</p>
+<p><strong>Answer:</strong> The first customer purchases the largest amount of milk, groceries, delicatessen, detergents and paper products of the three samples. These categories all fall near the mean of the categories for the full dataset. From the range of values, this observation does not seem to be an outlier as it is far from both the minimum and maximum values. This could represent a cafe, coffee chain, juice bar or smoothie establishment, all of which can consume a high volume of milk products in the regular business operations. They also generally offer small bites, sandwiches and finger foods, accounting for the large volume of Deli and Grocery products purchased. Finally, coffee machines, juicers and blenders all require constant cleaning to maintain the standard of cleanliness requires for food production, accounting for the greatest amount of Detergents and Paper products.</p>
+<p>The second customer purchased the greatest amount of Fresh and Frozen products of the three samples. While Fresh is near the mean of the full dataset, the other catgeories have quite relatively values when compared with the mean. They are not so low, however, that the observation should be considered an outlier, but perhaps a smaller establishment than the others in a similar category. The could be a restaurant which uses a lot of fresh produce and frozen meat products. It also purchased the least amount of Milk, Grocery, Detergents and Paper products, items that are used in smaller quantities at upscale restaurants.</p>
+<p>The third customer in the sample purchased the smallest quantity of Fresh, Frozen and Deli products, well below the mean of the full dataset. The values for Frozen and Delicatessen in particular are quite low, very near the minimum values of the range for the dataset. It is possiblet this observation might be an outlier. This could represent a small retailer such as a convenience store, with perhaps an attached cafe, whose offerings are generally of small variety and catering to "quick stops". If, however it is an outlier, it could fall into the same category as the second customer, that is, a small restaurant.</p>
 
 </div>
 </div>
@@ -12147,7 +12147,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> I attempted to predict the Grocery feature. All of the remaining features can also, arguably, fall into the category Grocery, and there appears to be some overlap among each of the features in turn. Milk, for example can mean dairy products, some of which fall into the category Delicatessen. These possibilites seem to indicate that the removed feature Grocery can be predicted by the remaining features. The R^2 of this regression is 0.60, showing that approximately 60% of the variation in Grocery can be accounted for by the remaining features.</p>
+<p><strong>Answer:</strong> I attempted to predict the Grocery feature. All of the remaining features can also, arguably, fall into the category Grocery, and there appears to be some overlap among each of the features in turn. Milk, for example can mean dairy products, some of which fall into the category Delicatessen. These possibilites seem to indicate that the removed feature Grocery can be predicted by the remaining features. The R^2 of this regression is 0.60, showing that approximately 60% of the variation in Grocery can be accounted for by the remaining features. As such, this feature is not necessary for identifying customer's spending habits as the variation it contributes can be approximated reasonably well by the remaining features.</p>
 
 </div>
 </div>
@@ -13944,8 +13944,8 @@ Ny7+WPF7swAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> Several pairs of features seem to exhibit some degree of correlation. Milk appears to be positively correlated with Grocery and Detergent_Paper, while Grocery seems positively correlated with Detergent_Paper. Fresh displays evidence of positive correlation with Frozen, and negative correlation with everything else except Delicatessen. Delicatessen seems to have no relationship with any of the other features.</p>
-<p>The data does not exhibit any evidence of a Normal distribution as many of the data points lay clustered near the origin, or highly skewed to the left. There are, however, many outliers in each category and a large range of values. The data may need to be normalized to proceed with analysis.</p>
+<p><strong>Answer:</strong> Several pairs of features seem to exhibit some degree of correlation. Milk appears to be positively correlated with Grocery and Detergent_Paper, while Grocery seems positively correlated with Detergent_Paper. Delicatessen seems to have no relationship with any of the other features. This confirms my suspicions about the possible irrelevance of Grocery from the previous question.</p>
+<p>The data does not exhibit any evidence of a Normal distribution as many of the data points lay clustered near the origin, or highly skewed to the right. There are, however, many outliers in each category and a large range of values. The data may need to be normalized to proceed with analysis.</p>
 
 </div>
 </div>
@@ -18481,7 +18481,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> Several of the data points are outliers for more than one feature. For example, observation 128 is an outlier for both Fresh and Delicatessen. When a data point is shown to be an outlier in one category, it could still hold valuable information for the other features. If it is an outlier in more than one category, however, it could unnecessarily skew the data and thus any model created may not generalize well. These data points have been added to the outlier list to be removed.</p>
+<p><strong>Answer:</strong> Several of the data points are outliers for more than one feature. For example, observation 128 is an outlier for both Fresh and Delicatessen. When a data point is shown to be an outlier in one category, it could still hold valuable information for the other features. If it is an outlier in more than one category, however, it could unnecessarily skew the data and thus any model created may not generalize well. The data points 65, 66, 128, 154, 75 and 154 have thus been added to the outlier list to be removed.</p>
 
 </div>
 </div>
@@ -18917,9 +18917,9 @@ p4aRiIiIiIgEPTWMREREREQk6KlhJCIiIiIiQU8NIxERERERCXpqGImIiIiISNBTw0hERERERILe
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong> In total, 0.7068 or approximately 71% of the variance in the data is explained by the first two principal components. The first four principal components explain 0.9311 or 93% of the variation in the data. According to <a href="https://onlinecourses.science.psu.edu/stat505/node/54">this</a> explanation of principal components, interpretation is based on finding which variables are most strongly correlated with each component. In this case we will define strongly correlated as a correlation value of 0.5 or higher. Recall that the feature names represent consumer spending in that category and all changes in features are referring to a change in consumer spending on that product.</p>
-<p>The first principal component is strongly correlated with the feature Detergents_Paper. It has a correlation value of over 0.7 with Detergents_Paper. This indicates that the component is largely a measure of Detergents_Paper and increases with it. There are no strong negative correlation values.</p>
+<p>The first principal component is strongly correlated with the feature Detergents_Paper. It has a correlation value of over 0.7 with Detergents_Paper. It is also correlated, though less strongly, with Milk and Grocery This indicates that the component is largely a measure of Detergents_Paper, and to a lesser extent, Milk and Grocery and increases with these features. There are no strong negative correlation values.</p>
 <p>The second principal component is strongly correlated with the features Fresh, Frozen and Delicatessen. Fresh has the largest correlation value of about 0.7. This indicates that the component is a measure of these three features and as they increase, this component increases also.</p>
-<p>The third principal component is strongly negatively correlated with the feature Fresh with a correlation value of less than -0.6 and strongly positively correlated with the feature Delicateseen with a correlation value of over 0.6. That is, when Fresh increases, Delicatessen and this component decreases.</p>
+<p>The third principal component is strongly negatively correlated with the feature Fresh with a correlation value of less than -0.6 and strongly positively correlated with the feature Delicateseen with a correlation value of over 0.6. It is also positively correlated to a lesser extent with Frozen. That is, when Fresh increases, Delicatessen, Frozen and this component decreases.</p>
 <p>The fourth principal component is strongly correlated with the feature Frozen with a correlation value of almost 0.8 and strongly negatively correlated with the feature Delicateseen with a correlation value of about -0.5. That is, when Frozen increases, this component increases and Delicatessen decreases.</p>
 
 </div>
@@ -19166,7 +19166,7 @@ p4aRiIiIiIgEPTWMREREREQk6KlhJCIiIiIiQU8NIxERERERCXpqGImIiIiISNBTw0hERERERILe
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
@@ -19186,7 +19186,7 @@ p4aRiIiIiIgEPTWMREREREQk6KlhJCIiIiIiQU8NIxERERERCXpqGImIiIiISNBTw0hERERERILe
 
 <span class="c1"># TODO: Calculate the mean silhouette coefficient for the number of clusters chosen</span>
 <span class="n">labels</span> <span class="o">=</span> <span class="n">clusterer</span><span class="o">.</span><span class="n">labels_</span>
-<span class="n">score</span> <span class="o">=</span> <span class="n">silhouette_score</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
+<span class="n">score</span> <span class="o">=</span> <span class="n">silhouette_score</span><span class="p">(</span><span class="n">reduced_data</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
 <span class="k">print</span> <span class="n">score</span>
 </pre></div>
 
@@ -19200,17 +19200,7 @@ p4aRiIiIiIgEPTWMREREREQk6KlhJCIiIiIiQU8NIxERERERCXpqGImIiIiISNBTw0hERERERILe
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>0.0102322907502
-</pre>
-</div>
-</div>
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>C:\Anaconda2\lib\site-packages\sklearn\metrics\cluster\unsupervised.py:193: VisibleDeprecationWarning: boolean index did not match indexed array along dimension 0; dimension is 440 but corresponding boolean dimension is 435
-  a = np.mean(distances_row[mask])
-C:\Anaconda2\lib\site-packages\sklearn\metrics\cluster\unsupervised.py:219: VisibleDeprecationWarning: boolean index did not match indexed array along dimension 0; dimension is 440 but corresponding boolean dimension is 435
-  for cur_label in set(labels) if not cur_label == label])
+<pre>0.426281015469
 </pre>
 </div>
 </div>
@@ -19234,9 +19224,9 @@ C:\Anaconda2\lib\site-packages\sklearn\metrics\cluster\unsupervised.py:219: Visi
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> Silhouette score for 4 clusters: -0.0467511396637</p>
-<p>Silhouette score for 3 clusters: -0.0296778962225</p>
-<p>Silhouette score for 2 clusters: 0.0102322907502</p>
+<p><strong>Answer:</strong> Silhouette score for 4 clusters: 0.332009582682</p>
+<p>Silhouette score for 3 clusters: 0.39689092645</p>
+<p>Silhouette score for 2 clusters: 0.426281015469</p>
 <p>The silhouette score ranges between -1 and 1, for which the ideal score is 1, therefore the best score is given by 2 clusters.</p>
 
 </div>
@@ -19254,7 +19244,7 @@ C:\Anaconda2\lib\site-packages\sklearn\metrics\cluster\unsupervised.py:219: Visi
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display the results of the clustering from implementation</span>
@@ -19964,7 +19954,7 @@ OgYBCAAAAEDH+P8B7z48vzTxqf8AAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Inverse transform the centers</span>
@@ -19978,6 +19968,9 @@ OgYBCAAAAEDH+P8B7z48vzTxqf8AAAAASUVORK5CYII=
 <span class="n">true_centers</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">true_centers</span><span class="p">),</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
 <span class="n">true_centers</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">segments</span>
 <span class="n">display</span><span class="p">(</span><span class="n">true_centers</span><span class="p">)</span>
+
+<span class="n">true_centers</span> <span class="o">=</span> <span class="n">true_centers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="s1">&#39;50%&#39;</span><span class="p">])</span>
+<span class="n">true_centers</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span> <span class="o">=</span> <span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -20030,6 +20023,275 @@ OgYBCAAAAEDH+P8B7z48vzTxqf8AAAAASUVORK5CYII=
 
 </div>
 
+<div class="output_area"><div class="prompt output_prompt">Out[25]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xe395908&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+pJT2A/aLiOE7G5ckSZKktqt3796sWLGCm2++meuvv56uXbvSuXNnxo0bt83RyptuuonLL7+cXr16
+0aFDB374wx9y1113UVNTA9ROU54wYQKdOnVizz335K677uLYY4/liCOOoH379kycOHGH2xs/fjx7
+7LEHH/3oR/nYxz7GP//5z0bja9euHc888wzvvPMOxcXFHHjggdv9LR555BG6detG7969mTZtGn/8
+4x/p0qUL3bp14/jjj2fPPfekc+fOXHLJJXXTizc79dRTOfDAA+nUqRP/+Z//yR/+8AdSSvzud7/j
+y1/+MsOH16ZsQ4cO5ZOf/CT33ntv3bXf/OY3OeCAAygoKNil06ub+85rO6BzRNQAnYBKapPVz2TO
+TwHmUpvQHgtMTSltBJZExCJgcERUAF1SSvMz19wGHAfMbmZskiRJktqYyspKNm3axPr16/nEJz5R
+V15TU7PNxZwqKio4/vjjKSioHd9LKdGhQweqqqrq6vTt27fueNmyZVss+tSpUye6d+++Q+0VFxfX
+HRcWFrJu3boGYyssLGTatGlcffXVjB49mqOOOoprrrmG/ffff5u/xRFHHPGBpBTg7bffZuzYscye
+PZvVq1eTUmLdunVbvJ9a/9nKysrYsGEDb775JhUVFUyfPp2777677rk2btxYN5V662t3pZ0eeU0p
+LQOuBV6hNmldk1L6M1CcUqrK1FkO9Mxc0gdYWq+JykxZH+DVeuWvZsokSZIkqcnmz5/PsmXLOO64
+4ygsLOS5555j5cqVrFy5ktWrV7NmzRqABhcQ6tevH/fdd19d/VWrVvHWW2/Rq1evujr1r+vVqxev
+vvp+GvP2229vMXW2Ke01pqH4Pv/5zzNnzhyWL1/O/vvvz1lnndW0H6UB1157LYsWLWL+/PmsXr26
+LsGtn9wvXfp+6lZRUUGHDh3o0aMHpaWljBo1aovnqq6u5qKLLtpm/LtCc6YN7w18BSgDelM7AvsN
+atf/rm/7a1XvgPHjx9d95s6duyubliRJktQCVVdXc88993DSSSdx6qmncvDBB3PmmWcyduxY3njj
+DaB2RHbOnDlA7YjnihUrWLt2bV0b3/rWt7j00kt55ZVXAHjjjTeYOXNm3fmtR22/9rWvcffdd/Po
+o4+yYcMGxo8fv8X5HW2vvuLiYpYsWVJX5/XXX2fmzJmsX7+eDh06sNdeezVrOm51dTWdOnWiqKiI
+lStXfiB2qH1v9YUXXmD9+vX86Ec/4oQTTiAiOOWUU7j77ruZM2cONTU1vPPOO8ybN2+L9313xNy5
+c7fI8balOdOGPwe8lFJaCRAR/wscCVRFRHFKqSoiSoDXM/Urgfrjx30zZY2VN2h7DyRJkiQpO0qL
+S3doO5udaX9HjBgxgvbt21NQUMBBBx3EhRdeyLe+9S0ArrrqKiZMmMDhhx/OihUr6NOnD2PGjGHY
+sGHsv//+nHTSSQwcOJCamhoWLFjA+eefD8CwYcN47bXX6NmzJyeeeCLHHnss8MHRxIMOOohf/OIX
+nHjiiaxfv56xY8fSs2dP9txzT4Adbq/+9xNOOIE77riD7t27M3DgQGbNmsV1113HaaedRkTw8Y9/
+nBtvvHGHfqv6xo4dy8knn0yPHj3o06cP3/3ud7dIrKH2ndfTTjuNhQsXUl5ezq9//Wugdur0jBkz
+uOiiizjppJNo3749gwcProtnR0ddy8vLKS8vr/s+YcKERutGUzbxbfDCiMHArcBhwLvAb4H5QD9g
+ZUrppxFxMbBPSmlcZsGm3wH/Ru204D8BH04ppYh4FDgvc/0s4IaU0v0N3DPtbLxtSe0fmGz/TtGk
+DaAlKVdK+pZQVVm1/YrNlM2eMNj2v8xLyp7s/32qZfxdKqJlxJkP3nrrLfbee28WL168S1fYzYUh
+Q4Zw6qmnMnr06Kzdo7E/W5nyBjPgnR55TSk9FhF3AU8CGzL/ezPQBZgeEaOBCmpXGCaltCAipgML
+MvXPrpeJngNMBjoC9zaUuEqStCOqKqtgfJZvku32JUl57Z577mHo0KHU1NTw3e9+l49+9KMtPnHN
+Z83a5zWlNCGldGBK6aMppdNSShtSSitTSp9LKe2fUhqWUlpdr/5PUkr7Zq6ZU6/8Hymlg1NKH04p
+nd+cmCRJkiRpd5gxYwa9e/emb9++vPjii0ydOnW33n/MmDF06dKFoqIiioqK6o633k92R2VrwaXm
+2ulpw7ngtOGmcdqwJGX6wvFZvsl4pw1LrZXThms5bVjZsjPThps18ipJkiRJ0u5g8ipJkiRJynsm
+r5IkSZKkvGfyKkmSJEnKeyavkiRJkqS8Z/IqSZIkqU2ZN28epaWldd8/8pGP8NBDD+UwIjWFyask
+SZKkJunXr4SIyNqnX7+SJsfSv39/CgsL6dq1K926deOoo47ipptuavLWPvX3Mn322Wc5+uijd/j3
+qG/ChAmMGjWqWW1o29rnOgBJkiRJLcPSpVU8+GD22h8ypKrJdSOCWbNmMWTIEKqrq5k3bx7nnXce
+f//735l0J3AGAAAXFklEQVQ0aVL2glTOOPIqSZIkqUXaPMrapUsXjjnmGKZNm8aUKVNYsGAB7733
+HhdeeCFlZWX06tWLs88+m3fffbfBdgYMGMADDzwAQE1NDVdccQX77rsvXbt25bDDDqOyshKAsWPH
+0q9fv7ryhx9+GIDZs2dzxRVXMG3aNLp06cIhhxwCwNq1aznzzDPp3bs3paWlXHbZZXUxv/jii5SX
+l7P33nvTs2dPTjrppLp4LrjgAoqLi+natSsf+9jHWLBgAcA2n2nzVOjrrruO4uJi+vTpw+TJk3fx
+L55bJq+SJEmSWoXDDjuMvn378pe//IVx48axePFinn76aRYvXkxlZSUTJ07cbhvXXnst06ZN4/77
+72fNmjVMmjSJwsJCAAYPHszTTz/NqlWrOPnkkznhhBN47733GD58OJdeeiknnngi1dXVPPnkkwCc
+dtpp7LHHHrz00ks8+eST/OlPf+KWW24B4LLLLmP48OGsXr2aV199lW9/+9sAzJkzh4cffpjFixez
+Zs0apk+fTvfu3QG4+OKLt/lMy5cvp7q6mmXLlnHLLbdwzjnnsGbNml36G+eSyaskSZKkVqN3796s
+WLGCm2++meuvv56uXbvSuXNnxo0bx5133rnd62+99VYuv/xy9t13XwAOPvhg9tlnHwBOPvlk9t57
+bwoKCrjgggt49913WbhwYYPtvP7669x3331cf/31dOzYkR49ejB27FimTp0KQIcOHaioqKCyspI9
+9tiDI488sq68urqaBQsWkFJi//33p7i4GIDf/OY323ymPfbYg8suu4x27drxxS9+kb322qvR+Foi
+33mVJEmS1GpUVlayadMm1q9fzyc+8Ym68pqamiYt5rR06VIGDhzY4LlrrrmGSZMm8dprrwFQXV3N
+m2++2WDdiooKNmzYQK9evYDaKc4pJfr16wfA1VdfzQ9+8AMGDx5Mt27d+M53vsPpp5/OkCFDOPfc
+cznnnHN45ZVX+OpXv8o111zD22+/vd1n6t69OwUF749PFhYWsm7duu0+c0vhyKskSZKkVmH+/Pks
+W7aM4447jsLCQp577jlWrlzJypUrWb16dZOm0JaWlvLiiy9+oPzhhx/m6quv5q677mLVqlWsWrWK
+oqKiuuSx/urFm9vp2LEjK1asYOXKlaxatYrVq1fz9NNPA9CzZ09uvvlmKisr+fWvf83ZZ5/NSy+9
+BMC5557L448/zoIFC1i4cCFXX301PXr02Olnai1MXiVJkiS1aNXV1dxzzz2cdNJJnHrqqRx88MGc
+eeaZjB07ljfeeAOoHZGdM2fOdts688wzueyyy1i8eDEAzzzzDCtXrqS6upoOHTrQvXt33nvvPSZO
+nEh1dXXddcXFxSxZsqQumS0pKWHYsGFccMEFVFdXk1LipZdeqttP9q677qpbCGrzVOSCggIef/xx
+HnvsMTZu3EinTp3o2LEjBQUFRARnnXXWTj1Ta+G0YUmSJElNUlpavEPb2exM+ztixIgRtG/fnoKC
+Ag466CAuvPBCvvWtbwFw1VVXMWHCBA4//HBWrFhBnz59GDNmDMOGDftAO/VHTb/zne/w3nvvMWzY
+MFasWMEBBxzA//7v/zJ8+HCGDx/Ofvvtx1577cUFF1xAaWlp3XUnnHACd9xxB927d2fgwIE8/vjj
+TJkyhXHjxnHQQQexbt06Bg4cyMUXXwzUjhKPHTuWtWvXUlxczA033ED//v156aWXuOCCC3j55Zfp
+2LEjw4cP56KLLgLgpz/9aZOfaevnag2iqZv45oOISC0p3lyp/UOa7d8pmrwBtCTlQkTA+CzfZHx2
+e9sA+1opR7L/96mW8XepiJYRp1qexv5sZcobzLqdNixJkiRJynsmr5IkSZKkvGfyKkmSJEnKeyav
+kiRJkqS8Z/IqSZIkScp7Jq+SJEmSpLzXrH1eI6IrcAvwEaAGGA38C5gGlAFLgJEppTWZ+pdk6mwE
+zk8pzcmUHwpMBjoC96aUxjYnLkmSJEnNV1ZW1ur2ClV+KCsr2+FrmpW8Aj+nNtk8ISLaA52BS4E/
+p5SuioiLgUuAcRFxEDASOBDoC/w5Ij6c2bj1RuCMlNL8iLg3IoanlGY3MzZJkiRJzbBkyZJchyDV
+2elpwxFRBHw6pfRbgJTSxswI61eAKZlqU4DjMsfHAlMz9ZYAi4DBEVECdEkpzc/Uu63eNZIkSZIk
+Neud1wHAmxHx24h4IiJujohCoDilVAWQUloO9MzU7wMsrXd9ZaasD/BqvfJXM2WSJEmSJAHNmzbc
+HjgUOCel9HhEXA+MA9JW9bb+3izjx4+vOy4vL6e8vHxXNi9JkiRJ2k3mzp3L3Llzm1Q3al853XER
+UQw8klIamPl+FLXJ6yCgPKVUlZkS/GBK6cCIGAeklNJPM/XvB34EVGyukyn/OvCZlNKYBu6Zdjbe
+tqT2pfps/06B/19IymcRAeOzfJPx2e1tA+xrpRzJ/t+n/LuU1JCIIKXU4CphOz1tODM1eGlE7Jcp
+Ggo8B8wEvpkpOw2YkTmeCXw9IvaIiAHAvsBjmanFayJicNT2EqPqXSNJkiRJUrNXGz4P+F1EdABe
+Ak4H2gHTI2I0taOqIwFSSgsiYjqwANgAnF1vGPUcttwq5/5mxiVJkiRJakV2etpwLjhtuGmcNixJ
+ThuW1DxOG5ZyIyvThiVJkiRJ2l1MXiVJkiRJec/kVZIkSZKU90xeJUmSJEl5z+RVkiRJkpT3TF4l
+SZIkSXnP5FWSJEmSlPdMXiVJkiRJec/kVZIkSZKU90xeJUmSJEl5z+RVkiRJkpT3TF4lSZIkSXnP
+5FWSJEmSlPdMXiVJkiRJec/kVZIkSZKU90xeJUmSpFaof0kJEZHVT/+Sklw/ptqQ9rkOQJIkSdKu
+V1FVRcryPaKqKst3kN7nyKskSZIkKe+ZvEqS1Ib1K+mX9WmF/Ur65foxJUmtgNOGJUlqw5ZWLeVB
+HszqPYZUDclq+5KktsGRV0mSJElS3jN5lSRJkiTlPZNXSZIkSVLea3byGhEFEfFERMzMfN8nIuZE
+xMKImB0RXevVvSQiFkXE8xExrF75oRHxdET8KyJ+1tyYJEmSJEmty64YeT0fWFDv+zjgzyml/YEH
+gEsAIuIgYCRwIPBF4FcREZlrbgTOSCntB+wXEcN3QVySJEmSpFaiWclrRPQFvgTcUq/4K8CUzPEU
+4LjM8bHA1JTSxpTSEmARMDgiSoAuKaX5mXq31btGkiRJkqRmj7xeD1wEpHplxSmlKoCU0nKgZ6a8
+D7C0Xr3KTFkf4NV65a9myiRJkiRJApqxz2tEfBmoSik9FRHl26iatnFuh40fP77uuLy8nPLybd1a
+kpSPSkr6U1VVkeswJElSjs2dO5e5c+c2qe5OJ6/Ap4BjI+JLQCegS0TcDiyPiOKUUlVmSvDrmfqV
+QGm96/tmyhorb1D95FWS1DLVJq679N82GxDbryJJknJq6wHJCRMmNFp3p6cNp5QuTSn1SykNBL4O
+PJBSOhW4G/hmptppwIzM8Uzg6xGxR0QMAPYFHstMLV4TEYMzCziNqneNJEmSJEnNGnltzJXA9IgY
+DVRQu8IwKaUFETGd2pWJNwBnp5Q2/7P7OcBkoCNwb0rp/izEJUmSJElqoXZJ8ppSmgfMyxyvBD7X
+SL2fAD9poPwfwMG7IhZJkiRJUuuzK/Z5lSRJkiQpq7IxbViSJEnStrSD2uVeJDWVyaskSZK0u20C
+xmf5HtluX9rNnDYsSZIkScp7Jq+SJEmSpLxn8ipJkiRJynsmr5IkSZKkvGfyKkmSJEnKeyavkiRJ
+kqS8Z/IqSZIkScp7Jq+SJEmSpLxn8ipJkiRJynsmr5IkSZKkvGfyKkmSJEnKeyavkiRJkqS8Z/Iq
+SZIkScp7Jq+SJEmSpLxn8ipJkiRJynsmr5IkSZKkvGfyqrzVv6SEiMjqp39JSa4fU5IkSVITtM91
+AFJjKqqqSFm+R1RVZfkOkiRJknYFR14lSZIkSXnP5FWSJEmSlPd2OnmNiL4R8UBEPBcRz0TEeZny
+fSJiTkQsjIjZEdG13jWXRMSiiHg+IobVKz80Ip6OiH9FxM+a90iSJEmSpNamOSOvG4HvpJT+H3AE
+cE5EHACMA/6cUtofeAC4BCAiDgJGAgcCXwR+FRGRaetG4IyU0n7AfhExvBlxSZIkSZJamZ1OXlNK
+y1NKT2WO1wHPA32BrwBTMtWmAMdljo8FpqaUNqaUlgCLgMERUQJ0SSnNz9S7rd41UnZ16JD1FY1L
++vXL9VNKkiRJLd4uWW04IvoDHwceBYpTSlVQm+BGRM9MtT7AI/Uuq8yUbQRerVf+aqZcyr4NG+DB
+B7N6i6ohQ7LaviRJktQWNDt5jYi9gLuA81NK6yJi691NduluJ+PHj687Li8vp7y8fFc2L0mSJEna
+TebOncvcuXObVLdZyWtEtKc2cb09pTQjU1wVEcUpparMlODXM+WVQGm9y/tmyhorb1D95FU51A7e
+f2VZkiRJknbc1gOSEyZMaLRuc0deJwELUko/r1c2E/gm8FPgNGBGvfLfRcT11E4L3hd4LKWUImJN
+RAwG5gOjgBuaGZeybRMwPsv3yHb7kiRJklqMnU5eI+JTwDeAZyLiSWqnB19KbdI6PSJGAxXUrjBM
+SmlBREwHFgAbgLNTSpunFJ8DTAY6AvemlO7f2bgkSZIkSa3PTievKaW/Au0aOf25Rq75CfCTBsr/
+ARy8s7FIkiRJklq35uzzKkmSJEnSbmHyKkmSJEnKeyavkiRJknZOhw5ERFY/Jf365foplSeavc+r
+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
+/gWsAAAAAElFTkSuQmCC
+"
+>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -20050,7 +20312,8 @@ OgYBCAAAAEDH+P8B7z48vzTxqf8AAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> Further to my initial analysis of the sample data, these segments appear to fall into two of the three possible types of establishments laid out in question 1. Segment 0 could be the category of restaurants as, like the second sample observation point, it has high amounts of Fresh and Frozen relative to the rest of the dataset. Segment 1, like the first sample, has high amounts of Milk, Grocery, Detergent_Paper and Delicatessen, indicating that it could represent a cafe, smoothie or similar type establishment.</p>
+<p><strong>Answer:</strong> Further to my initial analysis of the sample data, these segments appear to fall into two of the three possible types of establishments laid out in question 1. The cluster centroids for segment 0 have high purchasing in on catgeory, Fresh, similary to the median purchasing values in the full dataset. It also has relatively high purchasing in Frozen compared with the median of the full dataset, as the values in segment 0 are slightly higher than the median values of Frozen for the full fataset. This could represent the restaurant catgeory suggested in question 1. It was theorized that customers with high Fresh and Frozen purchasing would fall into the restaurant category. Segment 0 appears to be consistent with this category.</p>
+<p>The cluster centroids for segment 1 have very high purchasing values for the categories Grocery, Milk and Detergents_Paper relative to the median values. All three of these catgeories are much higher values than the median of the full dataset and could represent the cafe category suggested in question 1. It was theorized that customers with high Grocery, Milk, Delicatessen, Detergent and Paper products would fall into the cafe category. Though the Delicatessen purchasing in segement 1's centroid is comparable with the median values of the full dataset, Grocery, Milk and Detergent and Paper products appear consistent with the cafe category. Segment 1 appears to represent this category.</p>
 
 </div>
 </div>
@@ -20068,7 +20331,7 @@ OgYBCAAAAEDH+P8B7z48vzTxqf8AAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display the predictions</span>
@@ -20102,7 +20365,8 @@ Sample point 2 predicted to be in Cluster 0
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> Sample points 1 and 2 are best represented by segment 0, theorized to be the category of restaurants. Sample point 0 is best represented by segment 1 or the category suggested to be cafes. The predictions for each point are consistent with this.</p>
+<p><strong>Answer:</strong> Sample points 1 and 2 are best represented by segment 0, theorized to be the category of restaurants. These samples have high Fresh and Frozen purchasing values and mimic segment 0's centroid behaviour in these categories. Grocery, Milk, Detergents_Paper and Delicatessen are all low values in this sample, again similar to the segment's centroid behaviour. The predicted cluster thus appears consistent with the category spending of the sample.</p>
+<p>Sample point 0 is best represented by segment 1 or the category suggested to be cafes. This sample has high Grocery, Milk and Detergents_Paper values that mimic segment 1's centroid behaviour in these categories. Delicatessen values are average, while Fresh and Frozen have relatively low values in this sample, similar to the the segement's behaviour in these categories. The predicted cluster thus appears consistent with the category spending of the sample.</p>
 
 </div>
 </div>
