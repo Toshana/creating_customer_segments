@@ -12,11 +12,9 @@ This project requires **Python 2.7** and the following Python libraries installe
 
 You will also need to have software installed to run and execute an [iPython Notebook](http://ipython.org/notebook.html)
 
-Udacity recommends our students install [Anaconda](https://www.continuum.io/downloads), a pre-packaged Python distribution that contains all of the necessary libraries and software for this project. 
-
 ### Code
 
-Template code is provided in the notebook `customer_segments.ipynb` notebook file. Additional supporting code can be found in `renders.py`. While some code has already been implemented to get you started, you will need to implement additional functionality when requested to successfully complete the project.
+Code and analysis is provided in the notebook `customer_segments.ipynb` notebook file. Additional supporting code can be found in `renders.py`. This is an analysis of the dataset using machine learning techniques to separate a full customer list into different segments. These segements are useful, for example, in A/B testing.
 
 ### Run
 
